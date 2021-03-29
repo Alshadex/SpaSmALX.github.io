@@ -26,11 +26,6 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
 
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
@@ -44,9 +39,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Alex Lin</span>
-        <span class="d-none d-lg-block">
-        <img class="img-thumbnail img-thumbnail" src="img/lin_m.jpg" alt="">
-        </span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -79,6 +71,7 @@
                 <div class="subheading mb-5">
                     <a href="mailto:aalex.lin@mail.utoronto.ca">aalex.lin@mail.utoronto.ca</a>
                 </div>
+                        <!-- <img class="img-thumbnail img-thumbnail" src="img/lin_m.jpg"> -->
                 <p class="lead mb-5">
                     Computer scientist, full stack developer.
                     Have a strong passion for computer security, networking, and AI.
@@ -105,10 +98,11 @@
         <!-- <hr class="m-0"> -->
         <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
             <div class="w-100">
-                <h2 class="mb-5">Experience</h2>
+            <h2 class="mb-5">Experience</h2>
+            
+            <div id="postContainer"></div>
+            <script type="text/babel" src='react-Components/pContainer.js'></script>
 
-                <div id="postContainer"></div>
-                <script type="text/babel" src='react-Components/pContainer.js'>dfdf</script>
 
                 <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="resume-content">
