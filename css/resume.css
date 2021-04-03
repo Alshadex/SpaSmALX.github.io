@@ -17,7 +17,7 @@ body {
     }
   }
 
-img {
+.profilePicture {
     width: 300px;
     border-radius: 5px;
     border: 5px solid  black;
@@ -25,6 +25,12 @@ img {
     margin-left: -250px;
     float: left;
 }
+
+.crypto_ico {
+    max-width: 26px;
+    max-height: 26px;
+}
+
 /* h1,
 h2,
 h3,
