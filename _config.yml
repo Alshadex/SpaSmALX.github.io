@@ -23,12 +23,12 @@ email: aalex.lin@mail.utoronto.ca
 description: >- # this means to ignore newlines until "baseurl:"
   Computer Scientist, Software Engineer and Data Scientist.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://purelog.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
-repository: brennanbrown/purelog
-twitter: brennankbrown
+url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
+repository: SpaSmALX/SpaSmALX.github.io
+linkedin: https://www.linkedin.com/in/alex-lin-7a8962b4/
 github: SpaSmALX
 
-header_image: assets/profile.jpg
+header_image: assets/profile.png
 
 google_analytics:
 comments: true
