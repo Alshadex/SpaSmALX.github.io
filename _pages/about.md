@@ -14,8 +14,8 @@ I guess my tagline is I like working with computers! Programming is my passion a
 
 # Projects and Volunteering
 ### UTM Robotics Club 🤖
-- Main tech lead developer for [UTM Robotics Club](https://utmrobotics.com/).
-- Checkout the open source [Deerhunt repository](https://github.com/UTM-Robotics/Deerhunt-Infrastructure).
+- Main tech lead developer for <a href="https://utmrobotics.com/" target="_blank">UTM Robotics Club</a>
+- Checkout the open source <a href="https://github.com/UTM-Robotics/Deerhunt-Infrastructure" target="_blank" >Deerhunt repository</a>
 - **Python Flask** backend and **React** frontend.
 
 
