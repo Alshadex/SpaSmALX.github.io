@@ -2,279 +2,49 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description">
+
         <meta name="Alex Lin">
         <title>Alex Lin</title>
         <link rel="icon" href="img/ALicon.png">
 
         <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <!-- Custom fonts for this template -->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-        <!-- Custom styles for this template -->
-        <link href="css/resume.css" rel="stylesheet">
-        <!-- React dev scripts -->
-        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     </head>
 
-    <body id="page-top">
-        <!-- Left left hand side nav bar  -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Alex Lin</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
+    <body style="background-color:#263e4c;">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-2">
+                <div class="thumbnail">
+                        <img src="./img/lin_m.jpg" class="img-thumbnail" style="margin-top: 20px;">
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="col-md-auto">
+            </div> -->
+            <div class="col-lg-4" style="border-radius: 25px; border:2px solid black; margin-top: 19px;"> 
+                <h2 class="text-center" 
+                style="margin-top: 80px; color: white; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Alex Lin's Website</h2>
+                
+                <ul class="nav justify-content-center"
+                    style="margin-top: 30px;">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                        <a class="btn btn-primary" href="download/Alex Lin Resume.pdf"
+                            style="margin-right: 10px;">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+                        <a class="btn btn-primary" aria-current="page" href="./animations/myAnimations.html"
+                        style="margin-right: 10px;">Animations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+                        <a class="btn btn-primary" aria-current="page" href="./stats/stats.html">Stats formulas</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#personalProjects">Projects</a>
-                    </li> -->
                 </ul>
             </div>
-        </nav>
-
-        <!-- Front page. First thing people see  -->
-        <img class="profilePicture" src="img/lin_m.jpg">
-        <div class="container-fluid p-0">
-            <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-                <div class="w-100">
-                    <div class="rotate-center">
-                        <div class="name-letter">
-                            <h1 class="mb-0">Alex Lin</h1>
-                        </div>
-                        
-                    </div>
-
-                    <div class="subheading mb-5">
-                        <a href="mailto:aalex.lin@mail.utoronto.ca">aalex.lin@mail.utoronto.ca</a>
-                    </div>
-                    <p class="lead mb-5">
-                        <strong>Computer Scientist, Software Engineer, Data Scientist.</strong><br>
-                        Have a strong passion for computers, mathematics and statistics!
-                        <br><br>
-                        Free time developer for <a href="https://www.instagram.com/utm_robotics/?hl=en" target="_blank">UTM Robotics</a>. 🤖<br>
-                        <br>
-                        Take a look at -> <a href="download/Alex Lin Resume.pdf" target="_blank">My Resume</a>
-                        <br><br>
-                        I like posting various files, links, and cool ideas related to my interests over time. Check out:<br>
-                        <br>
-                        * <a href="animations/myAnimations.html" target="_blank">Some cool animations I made</a> ( Made using the <a href="https://processing.org/" target="_blank">Processing</a> framework. )<br>
-                        <!-- * <a href="" target="_blank">Meme collection</a><br> -->
-                        * <a href="https://web.stanford.edu/~jurafsky/slp3/" target="_blank">NLP Bible</a> ( Natural Language Processing. Side interest of mine. ) <br>
-                        * <a href="stats/stats.html" target="_blank">Stats learning file dump</a> ( Notes, formulas and exercises. Just do them and you'll understand statistics. )<br>
-                        <!-- * <a href="">page for other links</a> -->
-
-                        <br>
-                        Also, I'm a big crypto currency supporter. DeFi is the future!
-                        <img class="crypto_ico" src="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency/32/Bitcoin-icon.png">
-                        <img class="crypto_ico" src="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/32/Ethereum-ETH-icon.png">
-                    </p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/alex-lin-7a8962b4/">
-                        <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/SpaSmALX">
-                        <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-            </section>
-            <!-- <hr class="m-0"> -->
-            <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-                <div class="w-100">
-                    <div class="rotate-center">
-                    <h2 class="mb-5">Experience</h2>
-                    </div>
-                    <!-- <div id="postContainer"></div> -->
-                    <!-- <script type="text/babel" src='react-Components/pContainer.js'></script> -->
-                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="resume-content">
-                            <h3 class="mb-0">Backend Developer</h3>
-                            <div class="subheading mb-3"><strong>UTM Robotics Club</strong></div>
-                            <ul>
-                            University of Toronto Mississauga<br><br>
-                            <li>Developer for <a href="https://www.instagram.com/utm_robotics/?hl=en">UTM Robotics.</a></li>
-                            <li>Helped prepare and deploy UTM Robotics Club Battle Code event which ran between Jan 3—Jan10 2021</li>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">May 2019 - August 2019</span>
-                        </div>
-                    </div>
-                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="resume-content">
-                            <h3 class="mb-0">Cyber Security Analyst</h3>
-                            <div class="subheading mb-3"><strong>Deloitte</strong></div>
-                            <ul>
-                                Toronto, ON, Canada<br><br>
-                                <li>Got a chance to be part of Deloitte's Incident Response team.</li>
-                                <li>Supported the team's respones to urgent client situations.</li>
-                                <li>Developed a company internal fullstack webapp to help the team keep track of projects and statistics.
-                                    Frameworks used:
-                                </li>
-                                <ul>
-                                    <li><strong>Flask-SQLAlchemy, MySQL, VueJS, Qualtrics API.</strong></li>
-                                </ul>
-                                <li>Applied Python scripting to various tasks with excel.</li>
-                                <li>Produced RFP documents and well detailed incident response reports for clients.</li>
-                            </ul>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">Jan 2020 - Dec 2020</span>
-                        </div>
-                    </div>
-                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="resume-content">
-                            <h3 class="mb-0">Security and Test Infrastructure Intern</h3>
-                            <div class="subheading mb-3"><strong>QNX, BlackBerry</strong></div>
-                            <ul>
-                                Ottawa, ON, Canada<br><br>
-                                <li>Developed, maintainted and automated test suites for QNX security features.</li>
-                                <li>Ported previously written tests with Jenkins, PyTest and Bash.</li>
-                                <li>Learned to use <strong>PyTest Framework</strong> and <strong>Jenkins</strong>.</li>
-                                <li>Learned QNX OS micro-kernel architecture.</li>
-                                <li>Gained experience in cryptography, kernel security and networking.</li>
-                                <li>Increased my understanding of the Unix/Linux Kernel, its inner workings and various security mechanisms.</li>
-                                <li>Improved skills in <strong>Python, Bash</strong> and <strong>C</strong>.</li>
-                            </ul>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">May 2019 - August 2019</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- <hr class="m-0"> -->
-            <!-- <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education"> -->
-            <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="education">
-                <div class="w-100">
-                    <div class="rotate-center">
-                    <h2 class="mb-5">Education</h2>
-                    </div>
-                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="resume-content">
-                            <h3 class="mb-0">University of Toronto Mississauga</h3>
-                            <div class="subheading mb-3">Honors Bachelor of Science</div>
-                            <ul>
-                                Missisauga, ON, Canada<br><br>
-                            </ul>
-                            <div>Department of Mathematics and Computational Sciences</div>
-                            <ul>
-                            <li>Major in Mathematics.</li>
-                            <li>Major in Computer Science.</li>
-                            <li>Minor in Statistics.</li>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">September 2017 - April 2021</span>
-                        </div>
-                    </div>
-                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-                        <div class="resume-content">
-                            <h3 class="mb-0">Sha Tin College</h3>
-                            <div class="subheading mb-3">International Baccalaureate</div>
-                            <ul>
-                                Hong Kong<br><br>
-                            </ul>
-                            <ul>
-                                <li>Higher: Physics, Economics, History</li>
-                                <li>Standard: Mathematics, English, Chinese</li>
-                            </ul>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">2012 - 2017</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0">
-            <!-- <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="personalProjects">
-                <div class="w-100">
-                    <div class="rotate-center">
-                    <h2 class="mb-5">Projects</h2>
-                    </div>
-                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-                        <div class="resume-content">
-                            <h3 class="mb-0">Self hosted Rasberry Pi Server</h3>
-                            <p>Personal Rasberry Pi which I use to host this website, 
-                                run an rsync cloud and practice server security/administration.
-                            </p>
-                            <p>I currently use the rsync protocol over an ssh connection.
-                                Here is an example of me rsyncing school notes from my laptop
-                                to my Rasberry Pi.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row text-center text-lg-left">
-                            <div class="col-md-6">
-                                <a href="img/rsyncExample.png" class="d-block mb-4 h-100">
-                                    <img class="img-fluid img-thumbnail" src="img/rsyncExample.png" alt="">
-                                    <div class="caption">
-                                        Left terminal shows rsync dryrun followed by actual run.
-                                        Right terminal shows ssh connection to the pi.
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-                        <div class="resume-content">
-                            <h3 class="mb-0">Python Typing Speed Recorder</h3>
-                            <ul>
-                                <li><a href="https://github.com/ColeRichardson/typing-game-1">Github</a></li>
-                            </ul>
-                            <p>This is a simple python tkinter program that my friend and I developed together.
-                                To use, simply import a text file and type as fast as you can! We have provided three example files.
-                                With this project I practiced my python, object oriented programming and user interface design. 
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row text-center text-lg-left">
-                            <div class="col">
-                                <a href="img/typingGameMain.png" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="img/typingGameMain.png" alt="">
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="img/typingGameWpm.png" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="img/typingGameWpm.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-                        <div class="resume-content">
-                            <h3 class="mb-0">Creative Writing</h3>
-                            Creative writing pieces I completed for my writing class.
-                            <ul>
-                                <li><a href="download/The Beehive.pdf">The Beehive</a></li>
-                                <li><a href="download/Coach Nat.pdf">Coach Nat</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
         </div>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
     </body>
 </html>
