@@ -1,22 +1,35 @@
 
-import ThemeToggleButton from './theme-toggle-button'
+import {
+  Container,
+  Box,
+  Link,
+  Stack,
+  Heading,
+  Flex,
+  Menu,
+  MenuItem,
+  MenuList,
+  MenuButton,
+  IconButton,
+  useColorModeValue
+} from '@chakra-ui/react'
+// import ThemeToggleButton from './theme-toggle-button'
 
 
 const Navbar = props => {
-    const {path} = props
-
-    return (
-        <Box
-          position="fixed"
-          as="nav"
-          w="100%"
-          bg={useColorModeValue('#ffffff40', '#20202380')}
-          css={{ backdropFilter: 'blur(10px)' }}
-          zIndex={2}
-          {...props}
-        >
-        </Box>
+  const { path } = props
+  return (
+    <Box 
+      bg={useColorModeValue("#fffff")}
+      w='100%'
+      p={5}
+      borderColor='tomato'
+      borderRadius='lg'
+      borderWidth='2px'
+      color='black'
+      {...props}
+      >
+    </Box>
     )
 }
-
 export default Navbar
