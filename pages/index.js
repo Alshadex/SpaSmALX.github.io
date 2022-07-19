@@ -1,12 +1,16 @@
 
-import { Flex, Heading, useColorMode, useColorModeValue } from '@chakra-ui/react'
-import Link from 'next/link'
+import { 
+    Container,
+    Flex, 
+    useColorMode, 
+    useColorModeValue 
+} from '@chakra-ui/react'
+import Image from 'next/image'
 import Navbar from '../components/navbar'
+import Layout from '../components/layout'
+
 
 const HomePage = () => {
-    const { toggleColorMode } = useColorMode()
-    const exampleColor = useColorModeValue("gray.100", "gray.700")
-
     return (
     // <Flex height="100vh" alignItems="center" justifyContent="center">
     //     <Navbar ></Navbar>
@@ -18,15 +22,26 @@ const HomePage = () => {
     //         <Link href="/projects">My Projects</Link>
     //     </Flex>
     // </Flex>
-    <Flex height="150vh" justifyContent="center">
-    
+    <Flex height="100vh">
         <Navbar>
-            <Link href="/">
-            <a>Back to home</a>
-            </Link>
         </Navbar>
-    </Flex>
+        <Layout>
+            <Container
+            // display='flex'
+            marginTop={10}
+            marginLeft={10}
+            >
+                    <Image
+                        src="/profile.jpg"
+                        height="170"
+                        width="170"
+                        className="rounded-full">
+                    </Image>
 
+            </Container>
+        </Layout>
+    </Flex>
+    
     )
 }
 

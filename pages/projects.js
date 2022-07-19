@@ -1,16 +1,15 @@
-import { layout } from '@chakra-ui/react';
-import Link from 'next/link';
+import { Flex } from '@chakra-ui/react';
+import Layout from '../components/layout';
 import Navbar from '../components/navbar';
 
 const Projects = () => (
-    <layout>
+    <Flex height="100vh">
         <Navbar>
-            <Link href="/">
-            <a>Back to home</a>
-            </Link>
         </Navbar>
-    </layout>
-
+        <Layout>
+            
+        </Layout>
+    </Flex>
 )
 
 export default Projects
