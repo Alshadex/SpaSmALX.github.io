@@ -1,11 +1,13 @@
 
 import { 
+    Image,
+    Box,
     Container,
-    Flex, 
+    Flex,
+    Heading,
     useColorMode, 
     useColorModeValue 
 } from '@chakra-ui/react'
-import Image from 'next/image'
 import Navbar from '../components/navbar'
 import Layout from '../components/layout'
 
@@ -31,13 +33,19 @@ const HomePage = () => {
             marginTop={10}
             marginLeft={10}
             >
-                    <Image
-                        src="/profile.jpg"
-                        height="170"
-                        width="170"
-                        className="rounded-full">
-                    </Image>
-
+               <Box boxSize='150px'>
+                <Image 
+                    src='/profile.jpg'
+                    borderRadius='full'
+                    />
+                </Box> 
+            </Container>
+            <Container
+                marginTop={10}
+                >
+                <Heading fontSize='35px'>
+                    Alex Lin
+                </Heading>
             </Container>
         </Layout>
     </Flex>

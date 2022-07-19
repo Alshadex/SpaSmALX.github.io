@@ -46,15 +46,14 @@ const Navbar = props => {
         marginBottom="2"
         // justify="space-between"
         alignItems="center"
-        justifyContent="center"
+        justifyContent="left"
         borderRadius="5"
       >
         <Stack
           direction={{ base: 'column', md: 'row' }}
-          display={{ base: 'none', md: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
-        > 
-          <LinkItem href="/" path={path}>
+        >
+
+          <LinkItem href="/" path={path} marginLeft={10}>
             <strong>Alex Lin</strong>
           </LinkItem>
           <LinkItem href="/projects" path={path}>
