@@ -6,7 +6,8 @@ import {
     Flex,
     Heading,
     useColorMode, 
-    useColorModeValue 
+    useColorModeValue, 
+    VStack
 } from '@chakra-ui/react'
 import Navbar from '../components/navbar'
 import Layout from '../components/layout'
@@ -14,24 +15,16 @@ import Layout from '../components/layout'
 
 const HomePage = () => {
     return (
-    // <Flex height="100vh" alignItems="center" justifyContent="center">
-    //     <Navbar ></Navbar>
-    //     <button onClick={toggleColorMode}>Toggle Theme</button> */}
-    //     <Flex direction="column" background={exampleColor} p={12} rounded={6}>
-    //         <Heading mb={6}>
-    //             Login
-    //         </Heading>
-    //         <Link href="/projects">My Projects</Link>
-    //     </Flex>
-    // </Flex>
     <Flex height="100vh">
         <Navbar>
         </Navbar>
         <Layout>
             <Container
-            // display='flex'
+            bg='blue.100'
+            display='flex'
             marginTop={10}
-            marginLeft={10}
+            // marginLeft={10}
+            // marginRight={-101}
             >
                <Box boxSize='150px'>
                 <Image 
@@ -39,13 +32,26 @@ const HomePage = () => {
                     borderRadius='full'
                     />
                 </Box> 
-            </Container>
-            <Container
-                marginTop={10}
-                >
-                <Heading fontSize='35px'>
-                    Alex Lin
-                </Heading>
+
+                <VStack>
+                <Container
+                    marginLeft={5}
+                    // bg="red.100"
+                    >
+                    <Heading fontSize='35px'>
+                        Alex Lin
+                    </Heading>
+                    <Box
+                        borderRadius={15}
+                        mb={0}
+                        p={3}
+                        textAlign="center"
+                        bg="#F9ECE1"
+                    >
+                        Hello, I&apos;m a software engineer and systems architect!
+                    </Box>
+                </Container>
+            </VStack>
             </Container>
         </Layout>
     </Flex>

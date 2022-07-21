@@ -2,7 +2,7 @@ import { Flex } from '@chakra-ui/react';
 import Layout from '../components/layout';
 import Navbar from '../components/navbar';
 
-const Projects = () => (
+const Works = () => (
     <Flex height="100vh">
         <Navbar>
         </Navbar>
@@ -12,4 +12,4 @@ const Projects = () => (
     </Flex>
 )
 
-export default Projects
+export default Works

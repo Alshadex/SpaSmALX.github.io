@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/SpaSmALX/SpaSmALX.github.io#readme",
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.4",
     "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
