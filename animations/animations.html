@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible"/>
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+
+    <title>@Alshadex p5.js</title>
+  </head>
+  
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="../index.html">Alex Lin @Alshadex</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Gallery Showcase -->
+    <div class="container my-5">
+      <h1 class="text-center">P5.js Animation Gallery</h1>
+      <!-- <p class="lead text-center">
+      </p> -->
+    
+      <!-- Featured Section -->
+      <section id="featured">
+        <h2 class="text-center">Featured Animations</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Solar System</h5>
+                <p class="card-text">
+                  An accurate depiction of how fast the planets in our solar system move relative to each other. 
+                </p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#animation1Modal" >View Animation</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="animation1Modal" tabindex="-1" role="dialog" aria-labelledby="animation1ModalLabel" aria-hidden="true">
+      <div class="modal-dialog  modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="animation1ModalLabel">Solar System</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <div id="p5js-canvas">
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let p5Instance;
+      // Modal
+      $('#animation1Modal').on('shown.bs.modal', function (e) {
+        let sketch = function(p) {
+          class Planet {
+            constructor(Xcoef,Ycoef,Tcoef,size,color){
+              this.x = 0
+              this.y = 0
+              this.size = size
+              this.color = color
+              
+              this.Xcoef = Xcoef
+              this.Ycoef = Ycoef
+              this.Tcoef = Tcoef
+              this.t = p.random(0, 2*p.PI)
+            }
+
+            move() {
+              this.x = this.Xcoef*p.sin(this.t) + Math.floor(p.width/2)
+              this.y = this.Ycoef*p.cos(this.t) + Math.floor(p.height/2)
+              this.t += 0.02 * this.Tcoef
+              if (this.t >= 2*p.PI){
+                this.t = 0
+              }
+              
+            }
+
+            display() {
+              p.fill(this.color);   
+              p.circle(this.x, this.y, this.size);
+            }
+          }
+          let center = []
+          let planetData = [
+            /* Mercury */  {Xcoef: 50, Ycoef: 22, Tcoef:4.14, size: 10, color: 'grey'},
+            /* Venus */    {Xcoef: 85, Ycoef: 38, Tcoef:1.62, size: 12, color: '#e3bb76'},
+            /* Earth */    {Xcoef: 118, Ycoef: 54, Tcoef:1, size: 15, color: '#1c821a'},
+            /* Mars  */    {Xcoef: 154, Ycoef: 70, Tcoef:0.53, size: 10, color: '#CC3333'},
+            /* Jupiter */  {Xcoef: 188, Ycoef: 86, Tcoef:0.08, size: 20, color: '#d8ca9d'},
+            /* Saturn */   {Xcoef: 222, Ycoef: 103, Tcoef:0.034, size: 18, color: '#c99039'},
+            /* Uranus */   {Xcoef: 261, Ycoef: 118, Tcoef:0.011, size: 16, color: '#4FD0E7'},
+            /* Neptune */  {Xcoef: 293, Ycoef: 133, Tcoef:0.006, size: 16, color: '#4b70dd'},
+            /* Pluto */    {Xcoef: 330, Ycoef: 148, Tcoef:0.004, size: 9, color: '#968570'},
+
+          ]
+          let planets = []
+          p.setup = function() {
+            p.createCanvas(700, 393);
+            center = [Math.floor(p.width/2), Math.floor(p.height/2)]
+            for (i = 0; i < planetData.length; i++){
+              planets.push(new Planet(planetData[i].Xcoef,planetData[i].Ycoef,planetData[i].Tcoef, planetData[i].size, planetData[i].color));
+            }
+          };
+          p.draw = function() {
+            p.background(0);
+            p.strokeWeight(0.5)
+            p.stroke("#ffffff");
+            p.fill('#000000');
+            p.ellipse(center[0],center[1], 660, 297);
+            p.ellipse(center[0],center[1], 590, 265.5);
+            p.ellipse(center[0],center[1], 520, 234);
+            p.ellipse(center[0],center[1], 450, 202.5);
+            p.ellipse(center[0],center[1], 380, 171);
+            p.ellipse(center[0],center[1], 310, 139.5);
+            p.ellipse(center[0],center[1], 240, 108);
+            p.ellipse(center[0],center[1], 170, 76.5);
+            p.ellipse(center[0],center[1], 100, 45);
+            p.fill('yellow')
+            p.noStroke()
+            p.circle(center[0], center[1], 30) // sun
+            
+            for (i = 0; i < planets.length; i++){
+              planets[i].move()
+              planets[i].display()
+            }
+          };
+        };
+        p5Instance = new p5(sketch, 'p5js-canvas');
+      });
+
+      $('#animation1Modal').on('hidden.bs.modal', function (e) {
+        p5Instance.remove();
+      });
+    </script>
+  </body>
+</html>
