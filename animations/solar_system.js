@@ -8,7 +8,7 @@ $('#solarSystemModal').on('shown.bs.modal', function (e) {
         this.y = 0
         this.size = size
         this.color = color
-        
+
         this.Xcoef = Xcoef
         this.Ycoef = Ycoef
         this.Tcoef = Tcoef
@@ -22,11 +22,11 @@ $('#solarSystemModal').on('shown.bs.modal', function (e) {
         if (this.t >= 2*p.PI){
           this.t = 0
         }
-        
+
       }
 
       display() {
-        p.fill(this.color);   
+        p.fill(this.color);
         p.circle(this.x, this.y, this.size);
       }
     }
@@ -68,7 +68,7 @@ $('#solarSystemModal').on('shown.bs.modal', function (e) {
       p.fill('yellow')
       p.noStroke()
       p.circle(center[0], center[1], 30) // sun
-      
+
       for (i = 0; i < planets.length; i++){
         planets[i].move()
         planets[i].display()
